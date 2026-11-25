@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>West Bank Coffee Co. | Roasted in Judea and Samaria</title>
+<meta name="description" content="Premium specialty coffee, roasted in Judea and Samaria. They call it the West Bank. We call it home.">
+<style>body{margin:0;background:#f1e0c0}<style>
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Zilla+Slab:wght@500;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400;1,700&family=Frank+Ruhl+Libre:wght@500&display=swap');
+.wb,.wb *{box-sizing:border-box}
+.wb{--charcoal:#0e0704;--parchment:#f1e0c0;--deep:#e6cfa5;--gold:#d4a017;--gold-deep:#9a6a1f;--sienna:#6b3200;
+  --display:"Rye","Rockwell",Georgia,serif;--body:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --label:"Zilla Slab","Rockwell","Roboto Slab",Georgia,serif;--hebrew:"Frank Ruhl Libre","David","Times New Roman",serif;
+  width:100%;font-family:var(--body);font-size:18px;line-height:1.65;color:var(--charcoal);text-align:left}
+.wb a{color:inherit}
+.wb a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wb img{max-width:100%;display:block;border:0}
+.wb .in{max-width:1088px;margin:0 auto;padding:0 20px}
+.wb .light{background:var(--parchment);box-shadow:0 0 0 100vmax var(--parchment);clip-path:inset(0 -100vmax)} .wb .deepbg{background:var(--deep);box-shadow:0 0 0 100vmax var(--deep);clip-path:inset(0 -100vmax)} .wb .dark{background:var(--charcoal);color:var(--parchment);box-shadow:0 0 0 100vmax var(--charcoal);clip-path:inset(0 -100vmax)}
+.wb .sec{padding:64px 0}
+.wb h1,.wb h2,.wb h3,.wb h4,.wb p,.wb dl,.wb ul,.wb figure{margin:0;padding:0}
+.wb h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,5.6vw,62px);line-height:1.1;margin-bottom:20px}
+.wb h1 .l2{display:block;font-family:var(--body);font-style:italic;font-weight:700;font-size:.8em;color:var(--gold-deep);margin-top:6px;line-height:1.15}
+.wb h2{font-family:var(--display);font-weight:400;font-size:clamp(27px,4vw,42px);line-height:1.12;margin-bottom:12px}
+.wb h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15;margin-bottom:8px}
+.wb .lede{max-width:560px;margin-bottom:36px}
+.wb .dark .lede{color:var(--deep)}
+.wb .light .lede,.wb .light p{color:var(--charcoal);opacity:1}
+.wb .tag{font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:15px}
+.wb .btn{display:inline-block;font-family:var(--label);font-weight:600;text-transform:uppercase;font-size:17px;letter-spacing:.14em;text-decoration:none;padding:13px 28px;border:2px solid var(--charcoal);background:var(--charcoal);color:var(--parchment);transition:background .15s,color .15s,border-color .15s}
+.wb .btn:hover{background:var(--gold);color:var(--charcoal);border-color:var(--gold)}
+.wb .btn.ghost{background:transparent;color:var(--charcoal)}
+.wb .btn.ghost:hover{background:var(--charcoal);color:var(--parchment);border-color:var(--charcoal)}
+.wb .dark .btn{background:var(--gold);color:var(--charcoal);border-color:var(--gold)}
+.wb .dark .btn:hover{background:var(--parchment);border-color:var(--parchment)}
+.wb .dark .btn.ghost{background:transparent;color:var(--parchment);border-color:var(--parchment)}
+.wb .dark .btn.ghost:hover{background:var(--parchment);color:var(--charcoal)}
+.wb .actions{display:flex;gap:14px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){.wb .btn{transition:none}}
+.wb .hero{display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
+.wb .hero .mark{width:min(72%,340px);height:auto;margin:0 auto}
+@media (min-width:896px){.wb .hero{grid-template-columns:1.2fr .8fr}.wb .hero .mark{order:2;width:100%;max-width:400px}.wb .hero .copy{order:1}}
+
+.wb .roasts{display:grid;gap:36px;grid-template-columns:1fr}
+@media (min-width:704px){.wb .roasts{grid-template-columns:repeat(2,1fr);max-width:820px}}
+.wb .roasts figure{margin-bottom:18px;border:2px solid var(--gold-deep);background:#120b08}
+.wb .roasts img{width:100%;height:auto}
+
+.wb .story{display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
+.wb .story figure{width:min(100%,340px);margin:0 auto;border:2px solid var(--charcoal)}
+.wb .story img{width:100%;height:auto}
+@media (min-width:800px){.wb .story{grid-template-columns:1.25fr .75fr}.wb .story figure{margin:0 0 0 auto}}
+
+.wb .cols{display:grid;gap:32px;grid-template-columns:1fr}
+@media (min-width:704px){.wb .cols{grid-template-columns:repeat(3,1fr)}}
+.wb .cols>div{border-top:3px solid var(--charcoal);padding-top:16px}
+.wb .merch{display:grid;gap:36px;grid-template-columns:1fr;align-items:center}
+.wb .merch figure{width:min(100%,380px);margin:0 auto;border:2px solid var(--gold-deep)}
+.wb .merch img{width:100%;height:auto}
+@media (min-width:800px){.wb .merch{grid-template-columns:.8fr 1.2fr}.wb .merch figure{margin:0}}
+
+.wb .foot{display:grid;gap:26px;grid-template-columns:1fr}
+@media (min-width:704px){.wb .foot{grid-template-columns:1.2fr 1fr 1fr}}
+.wb .foot h4{font-family:var(--label);font-weight:600;text-transform:uppercase;font-size:15px;letter-spacing:.14em;color:var(--gold);margin:0 0 8px}
+.wb .foot p,.wb .foot li{margin:0;font-size:17px}
+.wb .foot ul{list-style:none;display:grid;gap:5px}
+.wb .foot a{text-decoration:none;border-bottom:1px solid var(--sienna)}
+.wb .foot a:hover{border-color:var(--gold);color:var(--gold)}
+.wb .foot .copy{grid-column:1/-1;font-size:14px;color:var(--deep);border-top:1px solid var(--sienna);padding-top:16px}
+</style></head><body>
+
+<div class="wb">
+
+<div class="dark tag" style="text-align:center;font-size:14px;padding:10px 16px;color:var(--gold)">Small batch. Numbered. Roasted in Judea and Samaria.</div>
+<div class="light" style="border-bottom:2px solid var(--charcoal)">
+  <div class="in" style="display:flex;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px">
+    <img src="img/badge-sm.webp" alt="" width="44" height="44" style="width:44px;height:44px">
+    <span style="font-family:var(--display);font-size:18px;line-height:1.1">West Bank Coffee Co.</span>
+  </div>
+</div>
+<div class="light" style="padding:56px 0 68px">
+  <div class="in hero">
+    <img class="mark" src="img/s_badge.webp" width="440" height="440" alt="West Bank Coffee Co. wolf badge">
+    <div class="copy">
+      <h1>They call it the West Bank.<span class="l2">We call it home.</span></h1>
+      <p style="font-size:22px;margin-bottom:6px">Premium specialty coffee. Roasted in Judea and Samaria.</p>
+      <p style="font-style:italic;margin-bottom:26px;color:var(--sienna)">Built for people who feel connected to this land.</p>
+      <blockquote style="border-left:4px solid var(--gold-deep);padding:2px 0 2px 16px;margin:0 0 32px;max-width:480px">
+        <p lang="he" dir="rtl" style="font-family:var(--hebrew);font-size:27px;line-height:1.3;text-align:left;color:var(--gold-deep)">זְאֵב יִטְרָף</p>
+        <p style="font-size:16px;font-style:italic;color:var(--sienna);margin-top:3px">Benjamin is a ravenous wolf. Genesis 49:27</p>
+      </blockquote>
+      <div class="actions">
+        <a class="btn" href="https://forms.gle/Jm8qrrQENksTcaN68">Buy coffee</a>
+        <a class="btn ghost" href="mailto:shalom@westbank.coffee">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="wb">
+
+<div class="dark sec">
+  <div class="in">
+    <h2>The coffee</h2>
+    <p class="lede">Two roasts in 250g bags. Whole bean or ground to your brew method.</p>
+    <div class="roasts">
+      <article>
+        <figure><img src="img/house.jpg" width="440" height="660" alt="House Blend, medium roast, 250g bag"></figure>
+        <h3>House Blend</h3>
+        <p class="tag" style="color:var(--gold);margin-bottom:6px">Medium roast</p>
+        <p>Chocolate, caramel, balanced. The everyday coffee, made for the kitchen counter and for gifting.</p>
+      </article>
+      <article>
+        <figure><img src="img/frontier.jpg" width="440" height="660" alt="Frontier Espresso, dark roast, 250g bag"></figure>
+        <h3>Frontier Espresso</h3>
+        <p class="tag" style="color:var(--gold);margin-bottom:6px">Dark roast</p>
+        <p>Bold, rich, full body. For people who like their coffee strong.</p>
+      </article>
+    </div>
+    <p style="margin:36px 0 20px;max-width:560px;color:var(--deep)">Both roasts come whole bean or ground. Coffee is sold by order, not through a shop.</p>
+    <div class="actions"><a class="btn" href="https://forms.gle/Jm8qrrQENksTcaN68">Buy coffee</a></div>
+  </div>
+</div>
+
+</div>
+
+<div class="wb">
+
+<div class="light sec">
+  <div class="in story">
+    <div class="txt">
+      <h2>The address is the story. The coffee is the invitation.</h2>
+      <p style="margin-bottom:16px">This coffee is roasted in Judea and Samaria, the biblical heartland where our people have lived for three thousand years.</p>
+      <p style="margin-bottom:16px">The world has opinions about this land. They're welcome to them. We're too busy building, roasting and living here to argue.</p>
+      <p style="font-style:italic;font-weight:700;color:var(--gold-deep);font-size:21px">Premium first. Mythology second. Politics last.</p>
+    </div>
+    <figure><img src="img/label-front.jpg" width="440" height="709" alt="West Bank Coffee Co. bag label: Roasted in Judea and Samaria, Binyamin, Israel"></figure>
+  </div>
+</div>
+
+</div>
+
+<div class="wb">
+
+<div class="deepbg sec" style="border-top:2px solid var(--charcoal)">
+  <div class="in">
+    <h2>How it works</h2>
+    <p class="lede">A small brand run by its founder, built around the places its customers live.</p>
+    <div class="cols">
+      <div><h3>Roasted here</h3><p>Every batch is small, numbered and roasted in Judea and Samaria.</p></div>
+      <div><h3>Sold direct</h3><p>Customers order straight from us. We know who is drinking what, and we ask how it tasted.</p></div>
+      <div><h3>Delivered by city</h3><p>Orders are grouped by town and delivered together through local pickup hosts.</p></div>
+    </div>
+  </div>
+</div>
+<div class="light sec" style="border-top:2px solid var(--charcoal)">
+  <div class="in merch">
+    <figure><img src="img/founder-cap.jpg" width="520" height="520" alt="Wearing the West Bank Coffee Co. cap"></figure>
+    <div class="txt">
+      <p class="tag" style="color:var(--gold-deep);margin-bottom:10px">Coming soon</p>
+      <h2>Merch</h2>
+      <p style="max-width:460px;margin-bottom:26px">The wolf, on a cap and more. Want to hear first, or have an idea for what we should make? Get in touch.</p>
+      <div class="actions"><a class="btn" href="mailto:shalom@westbank.coffee?subject=Merch">Ask about merch</a></div>
+      <p style="margin-top:18px;font-size:16px;color:var(--sienna)">shalom@westbank.coffee</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="wb">
+
+<div class="dark sec">
+  <div class="in">
+    <h2>What's next</h2>
+    <p style="font-family:var(--display);font-size:clamp(21px,2.8vw,30px);line-height:1.3;max-width:560px;margin-bottom:22px">A wider range, regular deliveries, and a roastery of our own in Binyamin.</p>
+    <p style="max-width:600px">These are our plans, not promises. We are building one proven step at a time, starting with the people who already drink the coffee.</p>
+  </div>
+</div>
+<div class="light sec" style="border-top:2px solid var(--charcoal)">
+  <div class="in">
+    <h2>Get in touch</h2>
+    <p class="lede">To buy coffee, partner with us or ask a question, write to us or use the order link.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:shalom@westbank.coffee">Email us</a>
+      <a class="btn ghost" href="https://forms.gle/Jm8qrrQENksTcaN68">Buy coffee</a>
+    </div>
+    <p style="margin-top:22px">Or write to <strong>shalom@westbank.coffee</strong></p>
+  </div>
+</div>
+
+</div>
+
+<div class="wb">
+
+<div class="dark" style="padding:44px 0 32px">
+  <div class="in foot">
+    <div><h4>West Bank Coffee Co.</h4><p>Roasted in Judea and Samaria.<br>Binyamin, Israel</p></div>
+    <div><h4>Contact</h4><ul><li><a href="mailto:shalom@westbank.coffee">shalom@westbank.coffee</a></li><li><a href="https://forms.gle/Jm8qrrQENksTcaN68">Order link</a></li><li><a href="https://whatsapp.com/channel/0029VbD4XVj0QeahkbhWCX2u">WhatsApp channel</a></li></ul></div>
+    <div><h4>Follow</h4><ul><li><a href="https://www.instagram.com/westbankcoffee">Instagram</a></li><li><a href="https://x.com/westbankcoffee">X</a></li><li><a href="https://www.facebook.com/westbankcoffee">Facebook</a></li></ul></div>
+    <p class="copy">&copy; 2026 West Bank Coffee Co.</p>
+  </div>
+</div>
+
+</div>
+
+</body></html>
