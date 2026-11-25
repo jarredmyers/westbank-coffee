@@ -49,21 +49,22 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
 nav{display:flex;align-items:center;gap:28px}
 nav a{color:var(--parch);text-decoration:none;font-family:var(--slab);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
 nav a:hover{color:var(--gold)}
-nav .btn{padding:11px 20px;font-size:13px;color:var(--char)}
+nav .btn{padding:11px 20px;font-size:13px;color:var(--char);white-space:nowrap}
 nav .btn:hover{color:var(--char)}
 
 /* hero */
-.hero{background:var(--char);color:var(--parch);position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 78% 45%,rgba(212,160,23,.16),transparent 70%)}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:84px 96px}
-.hero h1{font-size:clamp(46px,7.2vw,104px);color:var(--parch);margin-bottom:10px}
-.hero .home{display:block;font-family:var(--body);font-style:italic;font-weight:700;color:var(--gold);font-size:clamp(30px,4vw,54px);line-height:1.15;margin-bottom:34px}
-.hero .lead{font-size:clamp(20px,2vw,24px);max-width:30em;margin-bottom:34px;color:var(--deep)}
+.hero{background:var(--char);color:var(--parch);position:relative;overflow:hidden;min-height:min(92vh,860px);display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(48% 62% at 74% 50%,rgba(212,160,23,.20),transparent 72%)}
+.hero .wrap{position:relative;z-index:2;padding-block:84px 96px}
+.hero .txt{max-width:640px}
+.hero h1{font-size:clamp(46px,6.6vw,96px);color:var(--parch);margin-bottom:10px;text-shadow:0 2px 30px rgba(14,7,4,.9)}
+.hero .home{display:block;font-family:var(--body);font-style:italic;font-weight:700;color:var(--gold);font-size:clamp(30px,4vw,54px);line-height:1.15;margin-bottom:34px;text-shadow:0 2px 20px rgba(14,7,4,.9)}
+.hero .lead{font-size:clamp(20px,2vw,24px);max-width:28em;margin-bottom:34px;color:var(--deep)}
 .verse{display:flex;gap:18px;align-items:center;margin-bottom:38px;padding-left:20px;border-left:3px solid var(--gold)}
 .verse .he{font-family:var(--heb);font-size:34px;line-height:1.2;color:var(--gold)}
 .verse small{display:block;font-size:15px;font-style:italic;color:var(--deep)}
-.badge{justify-self:center;width:min(100%,500px);filter:drop-shadow(0 30px 50px rgba(0,0,0,.6))}
-.badge img{width:100%;border-radius:50%}
+.mark{position:absolute;z-index:1;right:-2%;top:50%;transform:translateY(-50%);width:min(86vh,52vw,900px);pointer-events:none}
+.mark img{width:100%;opacity:.96;filter:drop-shadow(0 0 60px rgba(212,160,23,.18))}
 .stripe{background:var(--char);border-top:1px solid #3a2616;border-bottom:1px solid #3a2616;color:var(--gold);text-align:center;padding:16px 12px}
 .stripe span{font-family:var(--slab);font-weight:600;letter-spacing:.3em;font-size:14px;text-transform:uppercase}
 
@@ -139,9 +140,10 @@ footer a:hover{color:var(--gold)}
 
 @media (max-width:960px){
   nav a:not(.btn){display:none}
-  .hero .wrap,.story .wrap,.merch .wrap{grid-template-columns:1fr;gap:44px}
-  .hero .wrap{padding-block:56px 64px}
-  .badge{order:-1;width:min(70%,340px)}
+  .story .wrap,.merch .wrap{grid-template-columns:1fr;gap:44px}
+  .hero{display:block;min-height:0}
+  .hero .wrap{padding-block:24px 64px}
+  .mark{position:relative;right:auto;top:auto;transform:none;width:min(112%,520px);margin:-6px auto 0;left:50%;translate:-50% 0}
   .roasts{grid-template-columns:1fr;gap:44px}
   .steps{grid-template-columns:1fr;gap:34px}
   .fgrid{grid-template-columns:1fr 1fr}
@@ -151,8 +153,10 @@ footer a:hover{color:var(--gold)}
 }
 @media (max-width:520px){
   body{font-size:18px}
-  .brand b{font-size:17px}
-  .bar span{letter-spacing:.1em;font-size:11px}
+  .brand b{font-size:16px}
+  .brand img{width:38px;height:38px}
+  .bar span{letter-spacing:.06em;font-size:10px}
+  nav .btn{padding:10px 14px;font-size:12px;letter-spacing:.1em}
   .btn{width:100%;text-align:center}
   nav .btn{width:auto}
   .roast .tx{padding:24px 22px 28px}
@@ -179,8 +183,9 @@ footer a:hover{color:var(--gold)}
 
 <main id="top">
 <section class="hero">
+  <div class="mark"><img src="img/wolf-mark.webp" width="1254" height="1254" alt="West Bank Coffee Co. wolf mark, Binyamin, Israel"></div>
   <div class="wrap">
-    <div>
+    <div class="txt">
       <h1>They call it the West Bank.</h1>
       <span class="home">We call it home.</span>
       <p class="lead">Premium specialty coffee, roasted in Judea and Samaria for people who feel connected to this land.</p>
@@ -193,10 +198,10 @@ footer a:hover{color:var(--gold)}
         <a class="btn ghost" href="mailto:shalom@westbank.coffee">Get in touch</a>
       </div>
     </div>
-    <div class="badge"><img src="img/badge.webp" width="1000" height="1000" alt="West Bank Coffee Co. wolf badge, Binyamin, Israel"></div>
   </div>
-  <div class="stripe"><span>Binyamin &#9733; Israel &#9733; Est. 2026</span></div>
 </section>
+<div class="stripe"><span>Binyamin &#9733; Israel &#9733; Est. 2026</span></div>
+
 
 <section class="coffee" id="coffee">
   <div class="wrap">
